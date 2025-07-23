@@ -74,7 +74,7 @@ iss_name, iss_l1, iss_l2 = fetch_tle()
 if not all([iss_name, iss_l1, iss_l2]):
     st.stop() # Stop the app if TLE fetch fails
 
-ts = load.timescale()
+ts = load.timescale(builtin=True)
 iss = EarthSatellite(iss_l1, iss_l2, iss_name, ts)
 
 # --- Real-Time Tracker Section ---
