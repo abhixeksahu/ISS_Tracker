@@ -1,15 +1,3 @@
-# api/index.py
-
-import os
-import subprocess
-
-# Start the Streamlit app as a subprocess
-port = os.environ.get("PORT", "8501")
-subprocess.Popen(["streamlit", "run", __file__, "--server.port", port, "--server.headless", "true"])
-
-# Do not remove the lines above. The rest of your app code goes below.
-# ------------------------------------------------------------------
-
 import streamlit as st
 import pandas as pd
 # ... (the rest of your app code)
